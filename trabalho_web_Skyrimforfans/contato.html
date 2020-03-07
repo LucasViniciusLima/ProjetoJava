@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Lucas Vinícius de Lima Bezerra"> 
+	<meta name="description" content="Sobre o Jogo Skyrim">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="icon" href="img/page_icon.png">
+
+	<title>Skyrim</title>
+
+</head>
+<body>
+<!--Menu-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">
+				<img src="img/sk_icon01.png">
+			</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse in" aria-expanded="true" style="">
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="dlcs.html">DLC's</a></li>
+				<li><a href="plataformas.html">Plataformas</a></li>
+				<li><a href="personagens.html">Personagens</a></li>
+				<li class="active"><a href="contato.html">Contato</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+	<div id ="plat" class="formulario">
+		<div class="row">
+			<div id="false_margin" class="col-md-4">
+				
+			</div>
+			<div class="col-md-4">
+				<h2>Comente o que achou do site</h2>
+				<form method="GET" onSubmit="return valida_dados(this)">
+					<label class="col-md-12"><center>Nome</center></label>
+					<input class="col-md-12 " type="text" name="nome">
+					<br>
+					<label class="col-md-12"><center>E-mail</center></label>
+					<input class="col-md-12" type="text" name="email" size="20" maxlength = "40">
+					<br>
+					<label class="col-md-12"><center>Telefone</center></label>
+					<input class="col-md-12" id="telefone" name="telefone" type="text" maxlength="15" value="" >
+					<br>
+					<label class="col-md-12"><center>Mensagem</center></label>
+					<br>
+					<div class="col-md-12 input-group">
+		            	<span class="input-group-addon">
+		            		<span class="glyphicon glyphicon-pencil"></span>
+		            	</span>
+		            	<textarea rows="7" size="300" id="texto" value="" class="form-control" placeholder="Digite aqui sua Mensagem"></textarea>  
+		                <div class="required-icon">
+		                </div>
+		        	</div>
+					<button class="col-md-6 btn btn-primary botao" type="submit">Enviar</button>
+				</form>
+			</div>
+			<div id="false_margin" class="col-md-4">
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h3>Skyrim for fans</h3>
+				<p>opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing pac</p>
+			</div>
+			<div class="col-md-4">
+				<h3>Links</h3>
+					<ul>
+						<li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="index.html">Home</a></li>
+						<li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="index.html">DLC's</a></li>
+						<li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="index.html">Plataformas</a></li>
+					</ul>
+			</div>
+			<div class="col-md-4">
+				<h3>Contato</h3>
+				<p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Endereço: Rua dos bobos, nº 552, Novo Horizonte - Vazante</p>
+				<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>E-mail: lucasbezerra@unipam.edu.br</p>
+				<p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>Telefones: (34)99130-2471 /(34) 3813-1035</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="footer-bottom">
+	<div class="container">
+		<center>
+			Todos os direitos reservados para: Skyrim_for_Fans_2019.
+			<p class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></p>
+		</center>		
+	</div>
+</div>
+<script type="text/javascript">
+	function valida_dados (nomeform)
+		{
+			if (nomeform.nome.value=="")
+			{
+				alert ("Nome inválido");
+				return false;
+			}
+			if (nomeform.telefone.value=="")
+			{
+				alert ("Telefone Inválido");
+				return false;
+			}
+
+			if (nomeform.email.value=="")
+			{
+				alert ("Email inválido");
+				return false;
+			}
+
+			if (nomeform.texto.value=="")
+			{
+				alert ("Você não escreveu nenhuma mensagem");
+				return false;
+			}
+
+			if (nomeform.email.value=="" || nomeform.email.value.indexOf('@', 0) == -1 || nomeform.email.value.indexOf('.', 0) == -1)
+			{
+				alert ("E-mail invalido.");
+				return false;
+			}           
+		return true;
+		}
+	</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
