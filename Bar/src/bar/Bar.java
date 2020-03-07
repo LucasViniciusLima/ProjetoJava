@@ -16,7 +16,7 @@ public class Bar {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Produto cerveja = new Produto("Budweiser");
+        Produto cerveja = new Produto("Budweiser"); 
         
         cerveja.compra(15, 3.5f);
         cerveja.venda(20);
